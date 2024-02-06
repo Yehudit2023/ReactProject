@@ -1,0 +1,23 @@
+.red {
+    border: 2px solid red;
+    /* background-color: red; */
+    color: red;
+    text-align: right;
+
+}
+
+.orange {
+    border: 2px solid orange;
+    /* background-color: orange; */
+    color: orange;
+    text-align: right;
+
+}
+
+.green {
+    border: 2px solid green;
+    /* background-color: green; */
+    color: green;
+    text-align: right;
+
+}

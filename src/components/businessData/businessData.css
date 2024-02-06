@@ -1,0 +1,17 @@
+.Fab{
+ color: black ,;
+ background-color: #C0AA81,
+}
+.b_data_container{
+    place-items: top;
+  
+ /* .b_data_container { */
+    display: flex;
+    gap: 6rem;
+    align-items: center;
+    text-align: right;
+    /* flex-direction: row-reverse; */
+    align-items: center;
+    justify-content: right;
+    padding: 20px;
+  }
