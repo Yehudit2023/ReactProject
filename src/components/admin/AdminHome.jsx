@@ -1,11 +1,17 @@
 
-import React from "react";
+import React, { useEffect } from "react";
 import { Button, Container, Grid } from '@mui/material';
-import { Link ,Outlet} from "react-router-dom";
+import { Link ,Outlet, useNavigate} from "react-router-dom";
 import BusinessData from "../businessData/BusinessData";
-import './adminHome.css'
 
 const AdminHome = () => {
+  const navigate = useNavigate();
+ 
+  useEffect(() => {
+     navigate('services');
+
+  }, []);
+
   return (
     <Container   dir="rtl">
       <Grid container direction="column" alignItems="center" spacing={2}>

@@ -41,7 +41,7 @@ const AddMeeting = (observer((props) => {
   return (<>
     <div>AddMeeting</div>
     <form onSubmit={handleFormSubmit}>
-      <TextFieldCustom name="id" type='number' label="meetingId" value={meeting.id} onChange={handleInputChange} /><br />
+      {/* <TextFieldCustom name="id" type='number' label="meetingId" value={meeting.id} onChange={handleInputChange} /><br /> */}
       <FormControl fullWidth sx={{ mt: 1 }}><InputLabel id="serviceType-label">Service Type</InputLabel>
         <Select labelId="serviceType-label" id="serviceType" name="serviceType" value={meeting.serviceType} onChange={handleInputChange} variant="outlined">
           <MenuItem value="">Select an option</MenuItem>

@@ -38,7 +38,7 @@ const MeetingList = (observer(() => {
   }
   return (<>
     {dataStore?.isLogin ?
-      <><div><h2>הפגישות שלי:</h2></div>
+      <><div><h2 style={{textAlign:"center"}}>הפגישות שלי:</h2></div>
         <div className="grid-container">
           {dataStore.meetingsArray.map((_, value) => {
             return <Meeting key={value} index={value} className="grid-item" />

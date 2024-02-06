@@ -22,11 +22,11 @@ function Meeting({ index }) {
                   <img src={logo2} alt='logo' />
                 </div>
                 <h2 style={{ textAlign: "center" }}>{thisMeeting.serviceType}</h2>
-                <p>Date: {new Date(thisMeeting.dateTime).toLocaleDateString()}</p>
-                <p>Time: {thisMeeting.dateTime.split('T')[1]}</p>
-                <p>Name: {thisMeeting.clientName}</p>
-                <p>Phone: {thisMeeting.clientPhone}</p>
-                <p>Email: {thisMeeting.clientEmail} {colorClass}</p>
+                <p>תאריך: {new Date(thisMeeting.dateTime).toLocaleDateString()}</p>
+                <p>שעה: {thisMeeting.dateTime.split('T')[1]}</p>
+                <p>שם: {thisMeeting.clientName}</p>
+                <p>טלפון: {thisMeeting.clientPhone}</p>
+                <p>דוא"ל: {thisMeeting.clientEmail}</p>
                 
               </>)}
           </div>

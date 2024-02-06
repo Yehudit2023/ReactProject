@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@mui/material";
 import dataStore from "../../data/dataStore";
 import ser1 from '../../images/ser1.webp';
