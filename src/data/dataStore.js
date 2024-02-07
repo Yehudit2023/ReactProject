@@ -4,7 +4,7 @@ import { defaultBD } from "./allData";
 import { addServiceToServer } from "./server";
 
 class DataStore {
-    isLogin = false;// isEdit = false;
+    isLogin = false;
     isAdd = true;
     servicesArray = [];
     meetingsArray = [];

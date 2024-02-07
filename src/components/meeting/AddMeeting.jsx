@@ -41,7 +41,6 @@ const AddMeeting = (observer((props) => {
   return (<>
     <div>AddMeeting</div>
     <form onSubmit={handleFormSubmit}>
-      {/* <TextFieldCustom name="id" type='number' label="meetingId" value={meeting.id} onChange={handleInputChange} /><br /> */}
       <FormControl fullWidth sx={{ mt: 1 }}><InputLabel id="serviceType-label">Service Type</InputLabel>
         <Select labelId="serviceType-label" id="serviceType" name="serviceType" value={meeting.serviceType} onChange={handleInputChange} variant="outlined">
           <MenuItem value="">Select an option</MenuItem>
@@ -53,7 +52,7 @@ const AddMeeting = (observer((props) => {
       <TextFieldCustom name="clientName" label="clientName" value={meeting.clientName} onChange={handleInputChange} /><br />
       <TextFieldCustom name="clientPhone" type='phone' label="clientPhone" value={meeting.clientPhone} onChange={handleInputChange} /><br />
       <TextFieldCustom name="clientEmail" type='email' label="clientEmail" value={meeting.clientEmail} onChange={handleInputChange} />
-      <div>
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
         <Button type="submit">Add</Button>
         <Button type="button" onClick={handleCloseModal}>Cancel</Button>
       </div>

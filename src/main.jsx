@@ -1,8 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-
-import App from './App.jsx'
 import AdminPage from './components/admin/AdminPage.jsx'
 import MeetingList from './components/meeting/MeetingList.jsx'
 import ServicesList from './components/service/ServicesList.jsx'
@@ -35,7 +33,6 @@ const routesArray = createBrowserRouter([
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* <App /> */}
     <RouterProvider router={routesArray} />
   </React.StrictMode>,
 )

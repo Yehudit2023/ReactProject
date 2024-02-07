@@ -1,6 +1,5 @@
-import { Button, Dialog, DialogContent, DialogTitle,Fab } from "@mui/material";
+import { Dialog, DialogContent, DialogTitle, Fab } from "@mui/material";
 import AddIcon from '@mui/icons-material/Add';
-
 import { useEffect, useState } from "react"
 import { observer } from "mobx-react";
 import dataStore from "../../data/dataStore";
@@ -38,7 +37,7 @@ const MeetingList = (observer(() => {
   }
   return (<>
     {dataStore?.isLogin ?
-      <><div><h2 style={{textAlign:"center"}}>הפגישות שלי:</h2></div>
+      <><div><h2 style={{ textAlign: "center" }}>הפגישות שלי:</h2></div>
         <div className="grid-container">
           {dataStore.meetingsArray.map((_, value) => {
             return <Meeting key={value} index={value} className="grid-item" />
@@ -46,22 +45,22 @@ const MeetingList = (observer(() => {
         </div> </>
       :
       <>
-      {/* <Button onClick={handleOpenModal}>Add Meeting</Button> */}
-      <Fab color="primary" aria-label="add" onClick={handleOpenModal} style={{
-                position: "fixed",
-                left: 50,
-                bottom: 20,
-                background: "beige",
-                color: "black",
-                borderColor: "black",
-              }}>
-  <AddIcon />
-</Fab>
+        <Fab color="primary" aria-label="add" onClick={handleOpenModal} style={{
+          position: "fixed",
+          left: 50,
+          bottom: 20,
+          background: "beige",
+          color: "black",
+          borderColor: "black",
+        }}>
+          <AddIcon />
+        </Fab>
         <Dialog open={open} onClose={handleCloseModal}>
           <DialogTitle>Add Meeting</DialogTitle>
           <DialogContent>
             <AddMeeting handleCloseModal={handleCloseModal} />
           </DialogContent>
         </Dialog></>}
-  </>)}))
+  </>)
+}))
 export default MeetingList;

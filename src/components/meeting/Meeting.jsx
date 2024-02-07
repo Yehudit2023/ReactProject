@@ -1,7 +1,7 @@
 
 import { CardContent, Card } from '@mui/material';
 import dataStore from "../../data/dataStore";
-import logo2 from '../../images/logo2.png';
+import logo2 from '../../assets/images/logo2.png';
 import './Meeting.css'
 import {getColorClass} from "../../data/allData";
 

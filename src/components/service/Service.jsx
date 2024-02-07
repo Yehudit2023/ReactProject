@@ -1,9 +1,9 @@
 import { Card, CardContent } from "@mui/material";
 import dataStore from "../../data/dataStore";
-import ser1 from '../../images/ser1.webp';
-import ser2 from '../../images/ser2.jpg';
-import ser3 from '../../images/ser3.webp';
-import ser4 from '../../images/ser4.webp';
+import ser1 from '../../assets/images/ser1.webp';
+import ser2 from '../../assets/images/ser2.jpg';
+import ser3 from '../../assets/images/ser3.webp';
+import ser4 from '../../assets/images/ser4.webp';
 
 
 function Service({ index }) {

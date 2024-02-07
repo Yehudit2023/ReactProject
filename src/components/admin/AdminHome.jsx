@@ -33,10 +33,6 @@ const AdminHome = () => {
         </Grid>
         
         <Grid item>
-          <h1 >Admin Home</h1>
-        </Grid>
-        
-        <Grid item>
           <Outlet />
         </Grid>
       </Grid>

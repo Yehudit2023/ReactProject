@@ -2,11 +2,9 @@ import axios from "axios";
 import DataStore from "./dataStore";
 import Swal from 'sweetalert2';
 import dataStore from "./dataStore";
-import {defaultBD} from "./allData";
 
 export async function CheckLogin(name, password) {
     try {
-
         const res = await axios.post('http://localhost:8787/login', { name, password });
         if (res.status === 200) {
             console.log('success');
@@ -43,8 +41,6 @@ export async function getServices() {
     try {
         const response = await axios.get('http://localhost:8787/services');
         const services = response.data;
-         console.log("services.length",services.length)
-         console.log("ki",services)
         dataStore.setServices(services);
         return;
     } catch (error) {
@@ -56,8 +52,6 @@ export async function addServiceToServer(service) {
     try {
         const res = await axios.post('http://localhost:8787/service', service)
         if (res.status === 200) {
-            console.log("hhhhhh")
-            console.log(res.status)
             dataStore.addService(service);
             console.log('addService success');
             return 'success';
@@ -74,10 +68,9 @@ export async function addServiceToServer(service) {
 export async function getMeetings() {
     try {
         const res = await axios.get('http://localhost:8787/appointments');
-        // const meetings = res.data;
         console.log(res.data)
         DataStore.setMeetings(res.data);
-        
+
         return;
     } catch (error) {
         console.error(error);
@@ -89,18 +82,18 @@ export async function addMeeting(meeting) {
         const res = await axios.post('http://localhost:8787/appointment', meeting)
         if (res.status === 200) {
             dataStore.addMeeting(meeting);
-            dataStore.setIsAdd(true);    
+            dataStore.setIsAdd(true);
             Swal.fire({
                 icon: "success",
                 title: "Great!",
                 text: "הפגישה נקבעה בהצלחה",
                 footer: '<a href="#">Why do I have this issue?</a>'
-              })
+            })
             console.log('meeeting added sucsessfuly');
         }
     }
     catch (error) {
-        dataStore.setIsAdd(false);    
+        dataStore.setIsAdd(false);
     }
 }
 export async function getBusinessData() {
