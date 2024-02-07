@@ -33,7 +33,7 @@ const AddService = (observer((props) => {
   return (
     <>
       <form onSubmit={handleFormSubmit}>
-        <TextField name="name" type='text' label="serviceName" variant="outlined" value={service.name} onChange={handleInputChange} margin="dense" />
+        <TextField name="name" type='text' label="serviceName" variant="outlined" value={service.name} onChange={handleInputChange} margin="dense" required />
         <br />
         <TextField name="description" label="description" variant="outlined" value={service.description} onChange={handleInputChange} margin="dense" />
         <br />

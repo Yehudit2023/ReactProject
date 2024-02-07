@@ -24,38 +24,8 @@ const BusinessData = observer(() => {
     setOpen(false);
   };
   return (
-  //   <Container className="b_data_container" style={{ display: "flex", gap: "6rem", alignItems: "center", textAlign: "right" }}>
-  //     <div style={{ display: "flex", alignItems: "right" }}>
-  //       <div>
-  //         <img src={logo2} alt='logo' style={{ marginRight: "16px" }}></img>
-  //       </div> </div>
-  //     <div>
-  //       <h1 variant="h6">Interior - Design</h1>
-  //       <h4  style={{ marginBottom: "8px" }}>בעלים: {bd.owner}</h4>
-  //       <h4  style={{ marginBottom: "8px" }}>כתובת: {bd.address}</h4>
-  //       <h4  style={{ marginBottom: "8px" }}>טלפון: {bd.phone}</h4>
-  //     </div>
-
-  //     {dataStore.isLogin && (
-  //       <div>
-  //         <div style={{ display: "flex", alignItems: "flex-end" }}>
-  //           <div style={{ marginRight: "16px" }}>
-  //             <Fab className="Fab" style={{ color: "black", background: "#C0AA81", }} aria-label="edit">
-  //               <Edit onClick={handleOpenModal} />
-  //             </Fab>
-  //           </div>
-  //         </div>
-  //         <Dialog open={open} onClose={handleCloseModal}>
-  //           <DialogTitle>Edit business data</DialogTitle>
-  //           <DialogContent><EditBusinessData handleCloseModal={handleCloseModal} /></DialogContent>
-  //         </Dialog>
-  //       </div>
-  //     )}
-  //   </Container>
-  // )
-  // ...............................
   <Container className="b_data_container" style={{ display: "flex", alignItems: "center", textAlign: "right",flexWrap: "wrap" }}>
-  <div className="frameTop"></div> {/* Partial frame above the component */}
+  <div className="frameTop"></div> 
   <div style={{ display: "flex", alignItems: "right" }}>
     <div>
       <img src={logo2} alt='logo' style={{ marginRight: "16px" }}></img>
@@ -83,7 +53,7 @@ const BusinessData = observer(() => {
       </Dialog>
     </div>
   )}
-  <div className="frameBottom"></div> {/* Partial frame below the component */}
+  <div className="frameBottom"></div> 
 </Container>
 
 )});

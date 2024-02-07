@@ -9,6 +9,11 @@ function Login() {
   const [name, setName] = useState('');
   const [password, setPasword] = useState('');
 
+  const handleLogin=()=>{
+    CheckLogin(name, password);
+    setName('');
+    setPasword('');
+  }
 
   return (
     <>
@@ -38,7 +43,9 @@ function Login() {
             }}
             variant="standard" margin="dense"
           />
-          <Button style={{ color: "#C0AA81", backgroundColor: "black"}} onClick={() => CheckLogin(name, password)}>Sign In</Button>
+          {/* <Button style={{ color: "#C0AA81", backgroundColor: "black"}} onClick={() => CheckLogin(name, password)}>Sign In</Button> */}
+          <Button style={{ color: "#C0AA81", backgroundColor: "black"}} onClick={handleLogin}>Sign In</Button>
+
         </FormControl>
       </CardContent>
     </Card></>

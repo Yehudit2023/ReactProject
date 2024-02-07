@@ -41,8 +41,8 @@ const AddMeeting = (observer((props) => {
   return (<>
     <div>AddMeeting</div>
     <form onSubmit={handleFormSubmit}>
-      <FormControl fullWidth sx={{ mt: 1 }}><InputLabel id="serviceType-label">Service Type</InputLabel>
-        <Select labelId="serviceType-label" id="serviceType" name="serviceType" value={meeting.serviceType} onChange={handleInputChange} variant="outlined">
+      <FormControl fullWidth sx={{ mt: 1 }}><InputLabel id="serviceType-label" >Service Type</InputLabel>
+        <Select labelId="serviceType-label" id="serviceType" name="serviceType" value={meeting.serviceType} onChange={handleInputChange} variant="outlined" required>
           <MenuItem value="">Select an option</MenuItem>
           {serviceOptions?.map((option) => (<MenuItem key={option} value={option}>{option}</MenuItem>))}
         </Select>
